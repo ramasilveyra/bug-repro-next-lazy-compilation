@@ -1,0 +1,4 @@
+{
+  "main": "./IndexServer",
+  "browser": "./IndexBrowser"
+}

@@ -1,6 +1,8 @@
 # Bug repro of next.js issue with webpack 5 lazy compilation
 
-When lazy compilation is enabled with next.js you need to request the page 3 times in order to be rendered properly.
+*This case has lazy compilation enabled only for `import(*)` and not on webpack entries*
+
+When lazy compilation is enabled with next.js you need to request the page 2 times in order to be rendered properly.
 
 ## Background
 
@@ -23,9 +25,6 @@ Syntax error: Unterminated template
 
 1. Execute `yarn dev`.
 1. Open home page http://localhost:3004/.
-1. Request of home page is never responded.
-1. Log `Hot Module Replacement is not enabled. Waiting for process restart...` appears 3 times.
-1. Request again the home page.
 1. Blank empty page is loaded.
 1. Request again the home page.
 1. Home page is properly loaded.

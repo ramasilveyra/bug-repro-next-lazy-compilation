@@ -1,10 +1,10 @@
 module.exports = {
-  webpack: (config, { dev }) => {
-    if (dev) {
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
       config.experiments = {
         ...config.experiments,
         lazyCompilation: {
-          entries: true,
+          imports: true,
         },
       };
     }

@@ -1,9 +1,3 @@
-import React from 'react';
+import IndexPage from '../views/Index';
 
-export default function Home() {
-  const onClick = () => {
-    console.log('loading module')
-    import('../lib/some-module');
-  };
-  return <div>Hello <button onClick={onClick}>Load Module</button></div>;
-}
+export default IndexPage;
